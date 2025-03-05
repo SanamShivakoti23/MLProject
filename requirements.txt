@@ -1,0 +1,4 @@
+pymongo==4.11.2
+
+
+-e .  #editable mode
