@@ -1,6 +1,0 @@
-{
-  "cSpell.words": ["sanam"],
-  "prettier.enableDebugLogs": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "notebook.defaultFormatter": "ms-python.autopep8"
-}
