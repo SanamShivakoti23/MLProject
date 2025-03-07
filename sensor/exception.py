@@ -9,6 +9,8 @@ def error_message_detail(error, error_detail:sys):
     error_message="error occured and the file name is [{0}] and the linenumber is [{1}] and error is [{2}]".format(
     filename,exc_tb.tb_lineno,str(error))
 
+    return error_message
+
 
 
 class SensorException(Exception):
