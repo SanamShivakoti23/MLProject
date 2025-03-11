@@ -7,6 +7,7 @@ from sensor.constant.database import DATABASE_NAME, COLLECTION_NAME
 from sensor.constant.env_variables import FILE_PATH
 from dotenv import load_dotenv
 
+from sensor.pipeline.training_pipeline import TrainPipeline
 
 # def test_exception():
 #     try:
@@ -22,8 +23,12 @@ if __name__ == "__main__":
     #     test_exception()
     # except Exception as e:
     #     print(e)
-    file_path = os.getenv(FILE_PATH)
-    database_name = DATABASE_NAME
-    collection_name = COLLECTION_NAME
-    dump_csv_file_to_mongodb_collection(
-        file_path, database_name, collection_name)
+    # load_dotenv()
+    # file_path = os.getenv(FILE_PATH)
+    # database_name = DATABASE_NAME
+    # collection_name = COLLECTION_NAME
+    # dump_csv_file_to_mongodb_collection(
+    #     file_path, database_name, collection_name)
+
+    training_pipeline = TrainPipeline()
+    training_pipeline.run_pipeline()
