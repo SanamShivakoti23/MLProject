@@ -2,7 +2,7 @@ from sensor.exception import SensorException
 import os
 import sys
 from sensor.logger import logging
-from sensor.utils import dump_csv_file_to_mongodb_collection
+from sensor.utils2 import dump_csv_file_to_mongodb_collection
 from sensor.constant.database import DATABASE_NAME, COLLECTION_NAME
 from sensor.constant.env_variables import FILE_PATH
 from dotenv import load_dotenv
