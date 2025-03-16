@@ -7,5 +7,6 @@ PyYAML
 dill
 scipy 
 imblearn==0.0
+xgboost
 
 # -e .  #editable mode
