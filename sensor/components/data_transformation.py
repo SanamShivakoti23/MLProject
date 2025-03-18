@@ -17,7 +17,9 @@ import sys
 import numpy as np
 import pandas as pd
 # to follow pandas' future behavior, set the option globally at the start of your script
-pd.set_option('future.no_silent_downcasting', True)
+# pd.set_option('future.no_silent_downcasting', True)
+
+# .infer_objects(copy=False)
 
 
 class DataTransformation:
@@ -80,7 +82,7 @@ class DataTransformation:
             target_feature_train_df = train_df[TARGET_COLUMN]
 
             target_feature_train_df = target_feature_train_df.replace(
-                TargetValueMapping().to_dict()).infer_objects(copy=False)
+                TargetValueMapping().to_dict())
 
             # testing dataframe
             input_feature_test_df = test_df.drop(
@@ -89,7 +91,7 @@ class DataTransformation:
             target_feature_test_df = test_df[TARGET_COLUMN]
 
             target_feature_test_df = target_feature_test_df.replace(
-                TargetValueMapping().to_dict()).infer_objects(copy=False)
+                TargetValueMapping().to_dict())
 
             preprocessor_object = preprocessor.fit(input_feature_train_df)
 
