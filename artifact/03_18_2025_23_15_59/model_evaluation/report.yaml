@@ -1,0 +1,12 @@
+best_model_metric_artifact: !!python/object:sensor.entity.artifact_entity.ClassificationMetricArtifact
+  f1_score: 0.966650074664012
+  precision_score: 0.9623389494549058
+  recall_score: 0.971
+best_model_path: saved_models\1742319041\model.pkl
+improved_accuracy: -0.01558729661161451
+is_model_accepted: false
+train_model_metric_artifact: !!python/object:sensor.entity.artifact_entity.ClassificationMetricArtifact
+  f1_score: 0.9510627780523975
+  precision_score: 0.9403714565004888
+  recall_score: 0.962
+trained_model_path: artifact\03_18_2025_23_15_59\model_trainer\trained_model\model.pkl
