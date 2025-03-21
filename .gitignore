@@ -172,3 +172,5 @@ cython_debug/
 
 # Artifacts
 artifact/
+
+saved_models/
