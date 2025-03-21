@@ -23,6 +23,7 @@ from sensor.constant.training_pipeline import SAVED_MODEL_DIR
 
 
 class TrainPipeline:
+    is_pipeline_running = False
 
     def __init__(self):
         self.training_pipeline_config = TrainingPipelineConfig()
@@ -144,6 +145,8 @@ class TrainPipeline:
                     "Trained model is not better than the best model")
 
             model_push_artifact = self.start_model_pusher(model_eval_artifact)
+            TrainPipeline.is_pipeline_running = False
 
         except Exception as e:
+            TrainPipeline.is_pipeline_running = False
             raise SensorException(e, sys)
